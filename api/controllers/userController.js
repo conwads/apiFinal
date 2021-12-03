@@ -2,7 +2,7 @@
 
 
 var mongoose = require('mongoose'),
-  Task = mongoose.model('Tasks');
+  User = mongoose.model('Users');
 
 exports.list_all_tasks = function(req, res) {
   Task.find({}, function(err, task) {
