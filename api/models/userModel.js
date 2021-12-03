@@ -16,3 +16,5 @@ var UserSchema = new Schema({
     required: 'User needs a password'
   }
 });
+
+module.exports = mongoose.model('Users', UserSchema);
