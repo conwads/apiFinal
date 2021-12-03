@@ -54,3 +54,13 @@ exports.delete_a_task = function(req, res) {
     res.json({ message: 'Task successfully deleted' });
   });
 };
+
+
+exports.create_a_user = function(req, res) {
+  var new_user = new User(req.body);
+  new_user.save(function(err, user) {
+    if (err)
+      res.send(err);
+    res.json(user);
+  });
+};
